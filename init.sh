@@ -6,9 +6,6 @@ if [ ! "$appName" ]; then
   prinf "no appName specific, will use demo as default\n"
 fi
 
-current=${PWD##*/}
-cd .. && mv "$current" $appName && cd $appName
-
 git init
 
 go env -w GO111MODULE=on
