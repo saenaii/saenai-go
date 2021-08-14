@@ -14,6 +14,7 @@ go mod init "$appName"
 
 if [[ $(uname) == 'Darwin' ]]; then
   sed -i "" "s/{{app_name}}/$appName/g" docker-compose.yaml
+  sed -i "" "s/{{app_name}}/$appName/g" main.go
 fi
 
 echo "require (
