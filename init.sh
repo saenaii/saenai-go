@@ -16,7 +16,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 go mod init "$appName"
 
 if [[ $(uname) == 'Darwin' ]]; then
-  sed -i "" "s/{{app_name}}/$appName/g" ./docker-compose.yaml
+  sed -i "" "s/{{app_name}}/$appName/g" docker-compose.yaml
 fi
 
 echo "require (
