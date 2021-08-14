@@ -18,6 +18,7 @@ fi
 
 echo "require (
 	github.com/stretchr/testify latest
+	github.com/go-sql-driver/mysql latest
 	gorm.io/driver/mysql latest
 	gorm.io/gorm latest
 )" >> go.mod
