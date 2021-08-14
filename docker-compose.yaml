@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  {{app_name}}:
+    build: .
+    container_name: {{app_name}}
+    restart: always
+    environment:
+      MYSQL_HOST: host.docker.internal
+      MYSQL_PORT: 3306
+      MYSQL_USER: user
+      MYSQL_DB: passowrd
+      TZ: Asia/Shanghai
+    secrets:
+      - db-password
+    expose:
+      - 8080
+
+secrets:
+  db-password:
+    file: ./password.txt
