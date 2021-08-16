@@ -6,6 +6,7 @@ if [ ! "$appName" ]; then
   prinf "no appName specific, will use demo as default\n"
 fi
 
+rm -rf .git
 git init
 
 go env -w GO111MODULE=on
@@ -23,4 +24,4 @@ echo "require (
 	gorm.io/driver/mysql latest
 	gorm.io/gorm latest
 )" >> go.mod
-go mod tidy
+go mod download
