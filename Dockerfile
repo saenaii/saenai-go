@@ -9,6 +9,6 @@ RUN go build -o main
 
 FROM alpine:latest
 WORKDIR /cmd/
-COPY --from=builder /app/main .
+COPY --from=builder /router/main .
 COPY --from=builder /usr/share/zoneinfo /usr/share/zoneinfo
 CMD ["./main"]

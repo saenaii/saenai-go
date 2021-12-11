@@ -35,7 +35,7 @@ func init() {
 func connect() *gorm.DB {
 	pass, err := ioutil.ReadFile("/run/secrets/db-password")
 	if err != nil {
-		panic("fail to load db password")
+		log.Fatal("fail to load db password")
 	}
 
 	dsn := fmt.Sprintf(
@@ -57,5 +57,5 @@ func connect() *gorm.DB {
 		return db
 	}
 
-	panic("fail to connect DB")
+	log.Fatal("fail to connect DB")
 }

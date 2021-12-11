@@ -19,6 +19,7 @@ if [[ $(uname) == 'Darwin' ]]; then
 fi
 
 echo "require (
+  github.com/kataras/iris/v12 latest
 	github.com/stretchr/testify latest
 	github.com/go-sql-driver/mysql latest
 	gorm.io/driver/mysql latest
