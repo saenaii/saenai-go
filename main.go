@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/kataras/iris/v12"
 
-	"{{app_name}}/app"
 	"{{app_name}}/router"
 )
 

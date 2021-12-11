@@ -5,7 +5,7 @@ import (
 )
 
 func Register(app *iris.Application) {
-	app.PartyFunc("/channel", func(p iris.Party) {
-		p.Get("/exists", channel.Exists)
+	app.PartyFunc("/path", func(p iris.Party) {
+		p.Get("/path", func() {})
 	})
 }
