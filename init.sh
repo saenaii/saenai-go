@@ -20,7 +20,9 @@ fi
 
 echo "require (
   github.com/kataras/iris/v12 latest
+  github.com/shurcooL/sanitized_anchor_name
 	github.com/stretchr/testify latest
+	golang.org/x/crypto
 	github.com/go-sql-driver/mysql latest
 	gorm.io/driver/mysql latest
 	gorm.io/gorm latest

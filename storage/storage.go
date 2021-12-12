@@ -12,24 +12,17 @@ import (
 )
 
 const (
-	tableName = "table"
 	retryTimes = 3
 )
-
-type Table struct {
-	ID        int       `json:"id"`
-	CreatedAt time.Time `json:"-"`
-	UpdatedAt time.Time `json:"-"`
-}
-
-func (Table) getTable() string {
-	return tableName
-}
 
 var db *gorm.DB
 
 func init() {
 	db = connect()
+}
+
+func GetInstance() *gorm.DB {
+	return db
 }
 
 func connect() *gorm.DB {
