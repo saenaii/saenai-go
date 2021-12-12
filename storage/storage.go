@@ -26,9 +26,9 @@ func GetInstance() *gorm.DB {
 }
 
 func connect() *gorm.DB {
-	pass, err := ioutil.ReadFile("/run/secrets/db-password")
+	pass, err := ioutil.ReadFile("/run/secrets/db-password.txt")
 	if err != nil {
-		log.Fatal("fail to load db password")
+		log.Fatal("fail to load db password.txt")
 	}
 
 	dsn := fmt.Sprintf(
